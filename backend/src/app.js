@@ -10,18 +10,13 @@ const contactRoutes = require("./routes/contact.routes");
 
 const app = express();
 
-
 app.use(cors());
 app.use(express.json());
 
-
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-
-
 app.use("/api/auth", authRoutes);
 app.use("/api/contacts", contactRoutes);
 
-
 connectDB();
-app.listen(process.env.PORT);
 
+module.exports = app;
