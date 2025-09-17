@@ -23,7 +23,7 @@ export default function HomePage({ onLogout }) {
 
     useEffect(() => {
         fetchContacts();
-    }, []);
+    }, [fetchContacts]);
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
