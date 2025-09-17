@@ -12,8 +12,8 @@ export default function AuthPage({ onLogin }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const url = isRegister
-            ? "http://localhost:5000/api/auth/register"
-            : "http://localhost:5000/api/auth/login";
+            ? "https://mycontacts-mc5l.onrender.com/api/auth/register"
+            : "https://mycontacts-mc5l.onrender.com/api/auth/login";
 
 
         const res = await fetch(url, {
