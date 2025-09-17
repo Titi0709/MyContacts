@@ -23,7 +23,8 @@ export default function HomePage({ onLogout }) {
 
     useEffect(() => {
         fetchContacts();
-    }, [fetchContacts]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
